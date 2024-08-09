@@ -17,7 +17,7 @@ interface IUser {
 
     UserBuilder addBio (String bio);
 
-    UserBuilder addIsDelete (boolean isDelete);
+    UserBuilder addAddress(String address);
 
     User build ();
 

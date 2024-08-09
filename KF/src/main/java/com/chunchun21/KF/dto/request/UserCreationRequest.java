@@ -1,16 +1,7 @@
-package com.chunchun21.KF.entities;
+package com.chunchun21.KF.dto.request;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-
-@Entity
-public class User {
+public class UserCreationRequest {
     
-    @Id
-    @GeneratedValue( strategy = GenerationType.UUID)
-    private String user_id;
     private String username;
     private String firstName;
     private String lastName;
@@ -19,35 +10,7 @@ public class User {
     private String birthDate;
     private String bio;
     private String address;
-    private boolean isDelete;
 
-
-    public User() {
-    }
-
-
-
-
-    public User(String username, String firstName, String lastName, boolean sex, String email, String birthDate, String bio, String address) {
-        this.username = username;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.sex = sex;
-        this.email = email;
-        this.birthDate = birthDate;
-        this.bio = bio;
-        this.address = address;
-     
-    }
-
-
-    public String getUser_id() {
-        return this.user_id;
-    }
-
-    public void setUser_id(String user_id) {
-        this.user_id = user_id;
-    }
 
     public String getUsername() {
         return this.username;
@@ -117,18 +80,7 @@ public class User {
         this.address = address;
     }
 
-    public boolean isIsDelete() {
-        return this.isDelete;
-    }
-
-    public boolean getIsDelete() {
-        return this.isDelete;
-    }
-
-    public void setIsDelete(boolean isDelete) {
-        this.isDelete = isDelete;
-    }
-
-
-
+    
+   
+    
 }

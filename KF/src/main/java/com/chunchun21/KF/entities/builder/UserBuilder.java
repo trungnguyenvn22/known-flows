@@ -124,39 +124,42 @@ public class UserBuilder implements IUser {
 
     @Override
     public UserBuilder addFirstName(String firstName) {
-        // TODO Auto-generated method stub
-        return null;
-    }
-
-    @Override
-    public UserBuilder addLastName(String lastName) {
-        // TODO Auto-generated method stub
-        return null;
-    }
-
-    @Override
-    public UserBuilder addSex(boolean sex) {
-        // TODO Auto-generated method stub
-        return null;
-    }
-
-    @Override
-    public UserBuilder addUserName(String username) {
-        // TODO Auto-generated method stub
-        return null;
-    }
-
-    @Override
-    public UserBuilder adddIsDelete(boolean isDelete) {
-        this.isDelete = isDelete;
+        this.firstName = firstName;
         return this;
     }
 
     @Override
+    public UserBuilder addLastName(String lastName) {
+        this.lastName = lastName;
+        return this;
+    }
+
+    @Override
+    public UserBuilder addSex(boolean sex) {
+        this.sex = sex;
+        return this;
+    }
+
+    @Override
+    public UserBuilder addUserName(String username) {
+        this.username = username;
+        return this;
+    }
+
+    @Override
+    public UserBuilder addAddress(String address) {
+        this.address = address;
+        return this;
+    }
+
+
+    @Override
     public User build() {
         
-        return null;
+        return new User(username, firstName, lastName, sex, email, birthDate, bio, address);
     }
+
+  
     
     
 
