@@ -8,6 +8,9 @@ public class KfApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(KfApplication.class, args);
+		
+		
 	}
 
 }
+

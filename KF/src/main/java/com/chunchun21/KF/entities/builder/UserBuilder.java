@@ -1,12 +1,9 @@
-package com.chunchun21.KF.entities;
+package com.chunchun21.KF.entities.builder;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import com.chunchun21.KF.entities.User;
 
-@Entity
-public class User {
-    
-    @Id
+public class UserBuilder implements IUser {
+
     private long user_id;
     private String username;
     private String firstName;
@@ -17,20 +14,6 @@ public class User {
     private String bio;
     private String address;
     private boolean isDelete;
-
-
-
-    public User(String username, String firstName, String lastName, boolean sex, String email, String birthDate, String bio, String address, boolean isDelete) {
-        this.username = username;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.sex = sex;
-        this.email = email;
-        this.birthDate = birthDate;
-        this.bio = bio;
-        this.address = address;
-        this.isDelete = isDelete;
-    }
 
 
     public long getUser_id() {
@@ -121,6 +104,62 @@ public class User {
         this.isDelete = isDelete;
     }
 
+    @Override
+    public UserBuilder addBio(String bio) {
+       this.bio = bio;
+       return this;
+    }
 
+    @Override
+    public UserBuilder addBirthDate(String birthDate) {
+        this.birthDate = birthDate;
+        return this;
+    }
 
+    @Override
+    public UserBuilder addEmail(String email) {
+        this.email = email;
+        return this;
+    }
+
+    @Override
+    public UserBuilder addFirstName(String firstName) {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public UserBuilder addLastName(String lastName) {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public UserBuilder addSex(boolean sex) {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public UserBuilder addUserName(String username) {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public UserBuilder adddIsDelete(boolean isDelete) {
+        this.isDelete = isDelete;
+        return this;
+    }
+
+    @Override
+    public User build() {
+        
+        return null;
+    }
+    
+    
+
+    
+    
 }
