@@ -1,8 +1,6 @@
 package com.chunchun21.KF.entities;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.Size;
 import lombok.AccessLevel;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -18,7 +16,8 @@ public class User {
     
     @Id
     @GeneratedValue( strategy = GenerationType.UUID)
-     String user_id;   
+     String user_id;
+    @Size(min = 6)
      String username;
      String firstName;
      String lastName;
