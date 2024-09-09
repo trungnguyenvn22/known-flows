@@ -12,6 +12,18 @@ spring:
   hibernate:
    ddl-auto: update
   show-sql: true
+ mail:
+  host: "smtp.gmail.com" 
+  port: 578
+  username: "Spring-KF-SendEmail"
+  password: "rdyp wopf zalt atvo"
+  properties:
+   mail:
+    smtp:
+     auth: true
+     starttls:
+      enable: true
+
 
 
 
