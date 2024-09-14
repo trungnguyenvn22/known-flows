@@ -1,4 +1,5 @@
 package com.chunchun21.KF.dto.request;
+import java.util.Date;
 
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
@@ -11,6 +12,15 @@ import lombok.experimental.FieldDefaults;
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class UserCreationRequest {
-    String username;
-    String email;
+     String username;
+     String firstName;
+     String lastName;
+     boolean sex;
+     String email;
+     String birthDate;
+     String bio;
+     String address;
+     String password;
+     boolean isChangePassword;
+     Date lastChangePassword;
 }

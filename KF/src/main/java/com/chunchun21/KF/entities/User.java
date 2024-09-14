@@ -1,4 +1,6 @@
 package com.chunchun21.KF.entities;
+import java.util.Date;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -33,12 +35,8 @@ public class User {
      String bio;
      String address;
      boolean isDelete;
-
-
-
-
-
-
+     boolean isChangePassword;
+     Date lastChangePassword;
 
 
 }
